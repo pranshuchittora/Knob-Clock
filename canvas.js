@@ -1,4 +1,5 @@
-var version = "v1.0";
+//Change Version here
+var version = "v1.1";
 //Canvas Init
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext("2d");
@@ -52,7 +53,7 @@ function renderClock() {
 
       //Seconds Knob
       c.beginPath();
-      c.arc(wid / 2, hig / 2, radSec, rad2Deg(-90), rad2Deg(newSec * 6 - 90), false);
+      c.arc(wid / 2, hig / 2, radSec, rad2Deg(-90), rad2Deg((newSec * 6 - 90)), false);
       c.strokeStyle = "#30f7d9";
       c.shadowColor = '#30f7d9';
       c.stroke();
@@ -60,7 +61,7 @@ function renderClock() {
 
       //Minutes Knob
       c.beginPath();
-      c.arc(wid / 2, hig / 2, radMin, rad2Deg(-90), rad2Deg(min * 6 - 90), false);
+      c.arc(wid / 2, hig / 2, radMin, rad2Deg(-90), rad2Deg((min + (newSec / 60)) * 6 - 90), false);
       c.strokeStyle = '#ff4683';
       c.shadowColor = '#ff4683';
       c.stroke();
@@ -69,7 +70,7 @@ function renderClock() {
 
       //Hrs Knob
       c.beginPath();
-      c.arc(wid / 2, hig / 2, radHrs, rad2Deg(-90), rad2Deg(hrs * 15 - 90), false);
+      c.arc(wid / 2, hig / 2, radHrs, rad2Deg(-90), rad2Deg((hrs + (min / 60)) * 15 - 90), false);
       c.strokeStyle = '#fff346';
       c.shadowColor = '#fff346';
       c.stroke();
@@ -97,7 +98,7 @@ function renderClock() {
       c.font = `25px Calibri`;
       c.fillStyle = '#fff';
       c.shadowColor = '#fff';
-      c.fillText('GitHub / pranshuchittora', wid / 2, (hig) * 0.93, wid);
+      c.fillText('GitHub / pranshuchittora', wid / 2, (hig) * 0.95, wid);
       //Version
       c.font = `20px Calibri`;
       c.fillStyle = '#ccc';
