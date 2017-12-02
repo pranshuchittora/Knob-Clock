@@ -1,5 +1,6 @@
 //Change Version here
 var version = "v1.1";
+
 //Canvas Init
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext("2d");
