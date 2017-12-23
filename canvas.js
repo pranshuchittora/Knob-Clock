@@ -6,6 +6,7 @@ var canvas = document.querySelector('canvas');
 var c = canvas.getContext("2d");
 
 //Canvas Sizing
+
 var wid = window.innerWidth;
 var hig = window.innerHeight;
 canvas.width = wid;
